@@ -1,33 +1,19 @@
-# Should your fund invest in Bitcoin?
 
-## 📖 Background
-You work as an analyst at an investment fund in New York. Your CFO wants to explore if it is a good idea to invest some of the fund's assets in Bitcoin. You have to prepare a report on this asset and how it compares to the stock market in general.
+# Report: Where our found should invest in?
+Descriptive Analysis of the returns and volatility of the most well-known instruments
 
-## 💾 The data
-You have access to three files:
+In this report we will try to answer premises regarding the returns and volatility of Bitcoin (BTC), Gold and S&P500 index, from September 2014 to November 2021. We will see its differences, similarities, and compare them (mainly in the case of the BTC) with the CPI (inflation).
 
-#### Bitcoin daily data in US dollars
-- "date" - date from September 17, 2014 to November 17, 2021
-- "open" - the price at the beginning of the trading day
-- "high" - the highest price reached that day
-- "low" - the lowest price reached that day
-- "close" - the price at the closing of the trading day
-- "volume" - how many Bitcoin were traded that day
+At the end, we will give our recommendations on how to proceed in creating the porfolio, taking into consideration some premises.
 
-#### S&P 500 daily data
-- "date" - date from September 17, 2014 to November 17, 2021
-- "open" - the index level at the beginning of the trading day
-- "high" - the highest level reached that day
-- "low" - the lowest level reached that day
-- "close" - the level at the closing of the trading day
-- "volume" - how many shares in the companies that make up the index were traded that day
+The chapters of this report will be according to this following questions:
+1. How does the performance of Bitcoin compare to the S&P 500 and the price of gold?
+2. Analyze Bitcoin's returns and volatility profile. Do you believe it could help improve the performance of a portfolio? Do you believe Bitcoin could be used as a hedge versus inflation?
+3. The CFO is looking to lower volatility in the fund. Explore building a portfolio using some or all of these assets. Make a recommendation that minimizes overall risk.
 
-#### inflation and gold as monthly data
-- "date" - date from September, 2014 to November, 2021
-- "gold_usd" - price in usd of gold for that month
-- "cpi_us" - the inflation index for the US for that month (cpi = consumer price index)
 
-_CPI data from the [U.S. Bureau of Labor Statistics](https://www.bls.gov/cpi/). Publicly available information_.
+----
+__Before starting, we import everything, and we start with the Data Summary (checking the datatypes and we look for NULL, mainly).__
 
 
 ```python
@@ -227,39 +213,6 @@ monthly_data.head()
   </tbody>
 </table>
 </div>
-
-
-
-## 💪 Competition challenge
-Create a report that covers the following:
-
-1. How does the performance of Bitcoin compare to the S&P 500 and the price of gold?
-2. Analyze Bitcoin's returns and volatility profile. Do you believe it could help improve the performance of a portfolio? Do you believe Bitcoin could be used as a hedge versus inflation?
-3. The CFO is looking to lower volatility in the fund. Explore building a portfolio using some or all of these assets. Make a recommendation that minimizes overall risk.
-
-## 🧑‍⚖️ Judging criteria
-
-| CATEGORY | WEIGHTING | DETAILS                                                              |
-|:---------|:----------|:---------------------------------------------------------------------|
-| **Recommendations** | 35%       | <ul><li>Clarity of recommendations - how clear and well presented the recommendation is.</li><li>Quality of recommendations - are appropriate analytical techniques used & are the conclusions valid?</li><li>Number of relevant insights found for the target audience.</li></ul>       |
-| **Storytelling**  | 30%       | <ul><li>How well the data and insights are connected to the recommendation.</li><li>How the narrative and whole report connects together.</li><li>Balancing making the report in depth enough but also concise.</li></ul> |
-| **Visualizations** | 25% | <ul><li>Appropriateness of visualization used.</li><li>Clarity of insight from visualization.</li></ul> |
-| **Votes** | 10% | <ul><li>Up voting - most upvoted entries get the most points.</li></ul> |
-
-## ✅ Checklist before publishing into the competition
-- Rename your workspace to make it descriptive of your work. N.B. you should leave the notebook name as notebook.ipynb.
-- Remove redundant cells like the judging criteria so the workbook is focused on your story.
-- Make sure the workbook reads well and explains how you found your insights.
-- Check that all the cells run without error.
-
-## ⌛️ Time is ticking. Good luck!
-
----------
-# Report: Where our found should invest in?
-Descriptive Analysis of the returns and volatility of the most well-known instruments
-
-# 0. Before starting, we import everything, and we start with the Data Summary (checking the datatypes and we look for NULL, mainly).
-
 
 ```python
 import matplotlib.pyplot as plt
